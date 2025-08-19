@@ -1,14 +1,17 @@
 #gridContainer {
-    width: 85px;
+    min-width: 10px;
+    max-width: 320px;
+    height: 256;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
+    align-items: center;
 }
 
 .pixelBlock {
+    display: flex;
     height: 16px;
     width: 16px;
     border: 2px solid black;
-    background-color: white;
 }
