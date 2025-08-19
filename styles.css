@@ -1,0 +1,14 @@
+#gridContainer {
+    width: 85px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.pixelBlock {
+    height: 16px;
+    width: 16px;
+    border: 2px solid black;
+    background-color: white;
+}
