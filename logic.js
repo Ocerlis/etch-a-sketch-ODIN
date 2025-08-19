@@ -1,10 +1,18 @@
 let pixel = document.createElement("div");
 let gridContainer = document.querySelector("#gridContainer"); 
 
-for (i = 1; i <= 256; i++) {
-    let pixel = document.createElement("div");
-    pixel.className = "pixelBlock";
-    gridContainer.appendChild(pixel);
+function gridSetup(gridSize) {
+    const grid = document.getElementById('gridContainer');
+    let heightAndWidth = 18 * gridSize;
+
+    grid.style.width = heightAndWidth + 'px';
+    grid.style.height = heightAndWidth + 'px';
+
+    for (i = 1; i <= gridSize * gridSize; i++) {
+        let pixel = document.createElement("div");
+        pixel.className = "pixelBlock";
+        gridContainer.appendChild(pixel);
+    }
 }
 
 function mouseTrail() {
@@ -23,5 +31,5 @@ function mouseTrail() {
     })
 }
 
+gridSetup(3);
 mouseTrail();
-
