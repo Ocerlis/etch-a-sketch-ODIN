@@ -12,8 +12,8 @@
 }
 
 #gridSelector {
+    font-size: 11px;
     margin: auto;
-    flex-grow: 3;
     flex-basis: 100%;
     margin-bottom: 10px;
 }

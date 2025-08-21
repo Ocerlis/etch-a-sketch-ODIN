@@ -1,6 +1,5 @@
 let pixel = document.createElement("div");
 let gridContainer = document.querySelector("#gridContainer"); 
-const gridButton = document.getElementById(".gridSelector");
 
 function gridSetup(gridSize) {
     const grid = document.getElementById('gridContainer');
@@ -14,6 +13,12 @@ function gridSetup(gridSize) {
         pixel.className = "pixelBlock";
         gridContainer.appendChild(pixel);
     }
+}
+
+function removeAllChildren(parentElement) {
+        while (parentElement.lastChild) {
+            parentElement.removeChild(parentElement.lastChild);
+     }
 }
 
 function mouseTrail() {
@@ -32,5 +37,22 @@ function mouseTrail() {
     })
 }
 
-gridSetup(13);
+function changeGridPrompt() {
+    let gridSize = prompt("Input the size of the grid:");
+
+    if (gridSize > 100 || gridSize < 1) {
+        alert("You have entered the wrong number. Try again.")
+        changeGridPrompt();
+    } else {
+        removeAllChildren(gridContainer);
+        gridSetup(gridSize);
+        mouseTrail();
+    }
+}
+
+document.getElementById('gridSelector').onclick = function() {
+       changeGridPrompt();
+}
+
+gridSetup(3);
 mouseTrail();
