@@ -1,6 +1,6 @@
 #gridContainer {
     margin: auto;
-    margin-top: 300px;
+    margin-top: auto;
     align-items: center;
     height: 256;
     display: flex;
@@ -8,6 +8,14 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+#gridSelector {
+    margin: auto;
+    flex-grow: 3;
+    flex-basis: 100%;
+    margin-bottom: 10px;
 }
 
 .pixelBlock {
@@ -16,3 +24,4 @@
     width: 16px;
     border: 1px solid black;
 }
+

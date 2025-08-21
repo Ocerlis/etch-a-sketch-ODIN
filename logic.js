@@ -1,5 +1,6 @@
 let pixel = document.createElement("div");
 let gridContainer = document.querySelector("#gridContainer"); 
+const gridButton = document.getElementById(".gridSelector");
 
 function gridSetup(gridSize) {
     const grid = document.getElementById('gridContainer');
@@ -31,5 +32,5 @@ function mouseTrail() {
     })
 }
 
-gridSetup(3);
+gridSetup(13);
 mouseTrail();
